@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ikhwan Hakim - Fresh Graduate Bisnis Digital Portfolio</title>
+<!-- Tailwind CSS CDN  -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- AOS Animation Library  -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Google Fonts  -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Offset for fixed header */
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .neo-border {
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        .neo-border-thin {
+            border: 2px solid #000;
+        }
+
+        .btn-yellow {
+            background-color: #FFE66D;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            transition: all 0.2s;
+        }
+
+        .btn-yellow:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #000;
+        }
+
+        .btn-white {
+            background-color: #FFF;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            transition: all 0.2s;
+        }
+
+        .btn-white:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #000;
+        }
+
+        .skill-badge {
+            border: 2px solid #000;
+            transition: all 0.2s;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .underline-yellow {
+            position: relative;
+        }
+
+        .underline-yellow::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background-color: #FFE66D;
+        }
+
+        /* Active Nav Link Effect */
+        .nav-link {
+            padding: 4px 12px;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+        }
+
+        .nav-link.active {
+            background-color: #FFE66D;
+            border-color: #000;
+            box-shadow: 2px 2px 0px #000;
+            transform: translate(-1px, -1px);
+        }
+    </style>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFF9E6',
+                        yellow: '#FFE66D',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease">
+<!-- Navigation  -->
+<nav class="bg-cream border-b-4 border-black fixed top-0 w-full z-[100]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<!-- Logo  -->
+<div class="flex items-center aos-init aos-animate" data-aos="fade-right">
+<div class="flex items-center space-x-2">
+<span class="text-2xl font-bold tracking-tight">PORTOFOLIO</span>
+</div>
+</div>
+<!-- Menu Items  -->
+<div class="hidden md:flex items-center space-x-4 aos-init aos-animate" data-aos="fade-down">
+<a class="nav-link text-black font-bold hover:text-gray-700 transition" href="#home">Home</a>
+<a class="nav-link text-black font-bold hover:text-gray-700 transition" href="#about">About</a>
+<a class="nav-link text-black font-bold hover:text-gray-700 transition" href="#skills">Skills</a>
+<a class="nav-link text-black font-bold hover:text-gray-700 transition" href="#experience">Experience</a>
+<a class="nav-link text-black font-bold hover:text-gray-700 transition" href="#project">Projects</a>
+<a class="nav-link text-black font-bold hover:text-gray-700 transition" href="#contact">Contact</a>
+</div>
+<!-- Hire Me Button  -->
+<div class="hidden md:block aos-init aos-animate" data-aos="fade-left">
+<a class="btn-yellow px-6 py-2 font-bold rounded-lg block" href="#contact">Work With Me</a>
+</div>
+<!-- Mobile Menu Button  -->
+<div class="md:hidden">
+<button class="text-black p-2 neo-border-thin bg-white" id="mobile-menu-btn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Menu  -->
+<div class="hidden md:hidden border-t-4 border-black bg-cream" id="mobile-menu">
+<div class="px-4 py-6 space-y-4">
+<a class="block text-black font-bold text-lg" href="#home">Home</a>
+<a class="block text-black font-bold text-lg" href="#about">About</a>
+<a class="block text-black font-bold text-lg" href="#skills">Skills</a>
+<a class="block text-black font-bold text-lg" href="#experience">Experience</a>
+<a class="block text-black font-bold text-lg" href="#project">Projects</a>
+<a class="block text-black font-bold text-lg" href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Content Padding to account for fixed header -->
+<div class="pt-20">
+<!-- Hero Section  -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24" id="home">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Left Content  -->
+<div class="aos-init aos-animate" data-aos="fade-right">
+<p class="text-xl font-bold mb-2 uppercase tracking-widest text-gray-800">Fresh Graduate · Bisnis Digital</p>
+<h1 class="text-5xl lg:text-8xl font-bold mb-4 leading-none">
+                    I'm <span class="bg-yellow px-2 border-2 border-black shadow-[4px_4px_0px_#000]">Ikhwan Hakim</span>
+</h1>
+<div class="flex items-center mb-8">
+<div class="h-1 w-24 bg-black mr-4"></div>
+<p class="text-xl font-semibold">Data Analyst &amp; Operations specialist</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a href="https://drive.google.com/file/d/13Yg7At7iHQe8-JNidUIF0aPqMB_XSN6d/view?usp=sharing" target="_blank" class="btn-yellow px-8 py-4 font-bold rounded-lg flex items-center gap-2">
+<span class="">Download CV</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+
+</div>
+</div>
+<!-- Right Content - Profile Image  -->
+<div class="flex justify-center lg:justify-end aos-init aos-animate" data-aos="fade-left">
+<div class="relative">
+<div class="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl neo-border bg-white overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-300">
+<img alt="Ikhwan Hakim" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_r4Zs051tHEZR7ijMOugFBM_xeVTGMLYjtJwMUhdEFI5iQLXEwcHtZvpN5AmO99UIMM77fNDarfy4ctMjRf8LNjWuLKkR6j4PNZKNE1g3sCL6YWjJjOfaBzV9kHMyNGzDksrCR91-9iacK11EK0zAcUD-chm7jwN2MEMEo9A34vr_lHq4CfG4A4z7sh435LSIrLWsWKT-auJzPJmJgRc824H9ogflz_efNvQLkTvrW3yAOWcga_wI7uK35lhkaV9p-1V4FebZ9kvV">
+</div>
+<!-- Decorative Elements  -->
+<div class="absolute -top-6 -right-6 w-20 h-20 bg-yellow rounded-full neo-border-thin flex items-center justify-center animate-bounce">
+<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section  -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="aos-init aos-animate" data-aos="fade-right">
+<h2 class="text-4xl lg:text-5xl font-bold mb-8 inline-block bg-yellow px-4 border-b-4 border-black">Profile Summary</h2>
+<div class="space-y-6 text-lg text-gray-800 leading-relaxed font-medium">
+<p class="">
+                        Lulusan <span class="font-bold underline decoration-yellow decoration-4">S1 Bisnis Digital Universitas Negeri Medan</span> dengan IPK 3,77. Berfokus pada analisis data, pengelolaan keuangan, dan administrasi operasional yang terstruktur dan akurat.
+                    </p>
+<p class="">
+                        Memiliki pengalaman dalam pengolahan data laporan di sektor keuangan (Mandiri Sekuritas) serta pendampingan teknologi digital bagi pendidik. Aktif dalam organisasi kemahasiswaan sebagai Bendahara Umum, mengasah kemampuan manajemen arus kas dan kepemimpinan tim.
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 aos-init aos-animate" data-aos="fade-left">
+<div class="bg-purple-200 p-6 neo-border rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200">
+<h4 class="font-bold text-xl mb-2">Data Focused</h4>
+<p class="text-sm">Menganalisis data transaksi real-time untuk laporan strategis.</p>
+</div>
+<div class="bg-green-200 p-6 neo-border rounded-lg mt-8 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200">
+<h4 class="font-bold text-xl mb-2">Finance &amp; Ops</h4>
+<p class="text-sm">Ahli dalam pengelolaan arus kas dan administrasi operasional.</p>
+</div>
+<div class="bg-pink-200 p-6 neo-border rounded-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200">
+<h4 class="font-bold text-xl mb-2">Tech Savvy</h4>
+<p class="text-sm">Optimasi alur kerja digital dan automasi proses bisnis.</p>
+</div>
+<div class="bg-blue-200 p-6 neo-border rounded-lg mt-8 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200">
+<h4 class="font-bold text-xl mb-2">Leadership</h4>
+<p class="text-sm">Pengalaman sebagai Bendahara Umum di tingkat fakultas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section  -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white neo-border rounded-3xl my-10" id="skills">
+<h2 class="text-4xl lg:text-5xl font-bold text-center mb-4 underline-yellow aos-init aos-animate" data-aos="fade-up">Skills</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 px-4">
+<div class="aos-init aos-animate" data-aos="fade-right">
+<h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="w-3 h-8 bg-black"></span> Analytical Stack
+                </h3>
+<div class="flex flex-wrap gap-3">
+<span class="skill-badge bg-yellow px-5 py-2 rounded-lg font-bold">Microsoft Excel (Advanced)</span>
+<span class="skill-badge bg-white px-5 py-2 rounded-lg font-bold">Data Analysis</span>
+<span class="skill-badge bg-white px-5 py-2 rounded-lg font-bold">Financial Reporting</span>
+<span class="skill-badge bg-white px-5 py-2 rounded-lg font-bold">Data Entry &amp; Cleaning</span>
+</div>
+</div>
+<div class="aos-init aos-animate" data-aos="fade-left">
+<h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="w-3 h-8 bg-black"></span> Professional Tools
+                </h3>
+<div class="flex flex-wrap gap-3">
+<span class="skill-badge bg-yellow px-5 py-2 rounded-lg font-bold">Google Workspace</span>
+<span class="skill-badge bg-white px-5 py-2 rounded-lg font-bold">Microsoft Word</span>
+<span class="skill-badge bg-white px-5 py-2 rounded-lg font-bold">PowerPoint</span>
+<span class="skill-badge bg-white px-5 py-2 rounded-lg font-bold">Team Coordination</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section  -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="experience">
+<h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 underline-yellow aos-init aos-animate" data-aos="fade-up">Experience &amp; Organization</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1: Mandiri Sekuritas -->
+<div class="bg-white neo-border rounded-lg p-8 flex flex-col h-full aos-init aos-animate hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200" data-aos="fade-up">
+<div class="mb-6">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold">Mandiri Sekuritas</h3>
+<p class="text-lg font-bold text-gray-700">Trader &amp; Advisor Trading (Training)</p>
+</div>
+<div class="mt-4">
+<p class="font-bold">Desember 2024 - Januari 2025</p>
+<p class="text-gray-600">Medan, Indonesia</p>
+</div>
+</div>
+<ul class="space-y-3 text-gray-700 font-medium list-disc list-inside flex-grow">
+<li class="">Menganalisis pergerakan harga saham secara real-time for pengambilan keputusan trading.</li>
+<li class="">Memberikan saran strategis kepada klien mengenai portofolio investasi berdasarkan analisis pasar.</li>
+<li class="">Mengelola administrasi transaksi harian dengan tingkat akurasi tinggi.</li>
+</ul>
+</div>
+<!-- Card 2: SEMABPM Fak. Ekonomi -->
+<div class="bg-white neo-border rounded-lg p-8 flex flex-col h-full aos-init aos-animate hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200" data-aos="fade-up" data-aos-delay="200">
+<div class="mb-6">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold">SEMABPM Fak. Ekonomi</h3>
+<p class="text-lg font-bold text-gray-700">Bendahara Umum</p>
+</div>
+<div class="mt-4">
+<p class="font-bold">Maret 2025 - Maret 2026</p>
+<p class="text-gray-600">Medan, Indonesia</p>
+</div>
+</div>
+<ul class="space-y-3 text-gray-700 font-medium list-disc list-inside flex-grow">
+<li class="">Mengelola arus kas organisasi dan bertanggung jawab atas transparansi laporan keuangan.</li>
+<li class="">Menyusun anggaran untuk berbagai kegiatan skala fakultas.</li>
+<li class="">Melakukan koordinasi keuangan antar departemen di lingkungan organisasi mahasiswa.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Projects & Achievements Section  -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="project">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 aos-init aos-animate" data-aos="fade-up">
+<div>
+<h2 class="text-4xl lg:text-5xl font-bold mb-4">Projects &amp; Achievements</h2>
+<p class="text-xl text-gray-600 font-bold">A highlight of academic excellence and technical contributions.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1: Pojok Data Desa Pegajahan -->
+<div class="bg-white neo-border rounded-lg p-6 lg:p-8 flex flex-col h-full aos-init aos-animate hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200" data-aos="fade-up">
+<div class="neo-border-thin rounded-lg overflow-hidden aspect-video mb-6">
+<img alt="Pojok Data Desa Pegajahan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt28n_Ql1_7KoGC1tYckBub-ZdD098CbBopKWJFpDzs8V9B7j3pHCr9ui4yTZ63knukq_MI706dMtrkdE9V2rw3p-HnUZY23SMwx4GRrhud3PPgY8lmTi0DPXicVver5O1UvyRYY-Kk7eL_8auCSI9Xbg4GAC_7C95rl3WTBtudUGsEZNx1SRJXDQVkb2KOKukWpn-woYXUgWc8m2POhMxxYR3USqLlOPIbG37lZIVU8LBr9rwTT_E9MzWy">
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-yellow text-black px-3 py-1 text-xs font-bold neo-border-thin rounded">GOVERNMENT</span>
+<span class="bg-blue-100 text-blue-700 px-3 py-1 text-xs font-bold neo-border-thin rounded">DIGITAL TRANSFORMATION</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Pojok Data Desa Pegajahan</h3>
+<p class="text-gray-700 font-medium leading-relaxed mb-6 flex-grow">Inisiatif digitalisasi data kependudukan dan profil desa untuk mendukung transparansi dan efisiensi birokrasi.</p>
+<div class="flex gap-4 items-center mb-6">
+<div class="text-center p-2 neo-border-thin rounded bg-cream flex-1">
+<p class="text-lg font-bold">1266</p>
+<p class="text-[8px] uppercase font-bold">Total KK</p>
+</div>
+<div class="text-center p-2 neo-border-thin rounded bg-cream flex-1">
+<p class="text-lg font-bold">400+</p>
+<p class="text-[8px] uppercase font-bold">Pelaku UKM</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-purple-200 px-3 py-1 rounded font-bold text-xs">Data Dashboard</span>
+<span class="skill-badge bg-yellow px-3 py-1 rounded font-bold text-xs">Transparency</span>
+</div>
+</div>
+<!-- Project 2: Informasi Pura Panataran Dharmaraksaka -->
+<div class="bg-white neo-border rounded-lg p-6 lg:p-8 flex flex-col h-full aos-init aos-animate hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200" data-aos="fade-up" data-aos-delay="200">
+<div class="neo-border-thin rounded-lg overflow-hidden aspect-video mb-6">
+<img alt="Pura Panataran Dharmaraksaka" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvPggS9rfBhioBT0EC-X0zh0fgoR8XDvmvesB6-2sP3YrIwYXYiJQd-izlbVd9_4Zx7cD3DPgfdRF36tZgC0k3B6fEVDQYkXRD3g2tI62pT5AARBnS_XHDbRe4NvsGXXukX347RVBv3cqgvEeKZf5N9UqhPDT5OSadyA57xhnPH5kApV77X0Aw4xHTQ_GM42P2VPET8n5EbQG7fKNlA33JNnJbnL8DwIx7VNJSBiTqeQwp4qVcBf51_kNw">
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-green-100 text-green-700 px-3 py-1 text-xs font-bold neo-border-thin rounded">CULTURAL HERITAGE</span>
+<span class="bg-orange-100 text-orange-700 px-3 py-1 text-xs font-bold neo-border-thin rounded">RELIGIOUS TOURISM</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Pura Panataran Dharmaraksaka</h3>
+<p class="text-gray-700 font-medium leading-relaxed mb-6 flex-grow">Pusat informasi digital untuk destinasi wisata religi yang mendokumentasikan sejarah transmigrasi masyarakat Bali di Sumatera Utara.</p>
+<div class="flex gap-4 items-center mb-6">
+<div class="text-center p-2 neo-border-thin rounded bg-cream flex-1">
+<p class="text-lg font-bold">1989</p>
+<p class="text-[8px] uppercase font-bold">Established</p>
+</div>
+<div class="text-center p-2 neo-border-thin rounded bg-cream flex-1">
+<p class="text-lg font-bold">Heritage</p>
+<p class="text-[8px] uppercase font-bold">Cultural Asset</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-blue-200 px-3 py-1 rounded font-bold text-xs">Documentation</span>
+<span class="skill-badge bg-green-200 px-3 py-1 rounded font-bold text-xs">Information Hub</span>
+</div>
+</div>
+<!-- Achievement 1: Presenter IECES 2024 -->
+<div class="bg-white neo-border rounded-lg p-6 lg:p-8 flex flex-col h-full aos-init aos-animate hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200" data-aos="fade-up">
+<div class="neo-border-thin rounded-lg overflow-hidden aspect-video mb-6 flex items-center justify-center bg-cream">
+<img alt="IECES Logo" class="h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPz4rTxIv0u6t4y3RtHmZRTo18zq9Tc2W9i6VYzDGeYGNjzribUgWwyVhGETaumX_PeJPp2gyJrOItbeEg32GtHFoRWuvCrS7s3MeYze0rHQ_D3J4KRclVvDik3MGWmJFQz3ujmnEcIe7_yoDi2fP6h0auOAOLYILxOPaDp7AUVel7p0pOGeIAuxsndLmXoapg1P7-MBxS-LITydPIsPkkBGsG9bWdnzrn5xEo4Aw54DrhDXAtgKDOIbt4cxwcHvSik2a0muo1LGQI">
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-yellow text-black px-3 py-1 text-xs font-bold neo-border-thin rounded">ACADEMIC</span>
+<span class="bg-purple-100 text-purple-700 px-3 py-1 text-xs font-bold neo-border-thin rounded">INTERNATIONAL CONFERENCE</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Presenter IECES 2024</h3>
+<p class="text-gray-700 font-medium leading-relaxed mb-6 flex-grow">IECES Presenter for digital economy research and academic discussion at an international scale.</p>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-green-200 px-3 py-1 rounded font-bold text-xs">Research Presentation</span>
+<span class="skill-badge bg-yellow px-3 py-1 rounded font-bold text-xs">International Exposure</span>
+</div>
+</div>
+<!-- Achievement 2: Presenter IECES 2025 -->
+<div class="bg-white neo-border rounded-lg p-6 lg:p-8 flex flex-col h-full aos-init aos-animate hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_#000] transition-all duration-200" data-aos="fade-up" data-aos-delay="200">
+<div class="neo-border-thin rounded-lg overflow-hidden aspect-video mb-6 flex items-center justify-center bg-cream">
+<img alt="IECES Logo" class="h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPz4rTxIv0u6t4y3RtHmZRTo18zq9Tc2W9i6VYzDGeYGNjzribUgWwyVhGETaumX_PeJPp2gyJrOItbeEg32GtHFoRWuvCrS7s3MeYze0rHQ_D3J4KRclVvDik3MGWmJFQz3ujmnEcIe7_yoDi2fP6h0auOAOLYILxOPaDp7AUVel7p0pOGeIAuxsndLmXoapg1P7-MBxS-LITydPIsPkkBGsG9bWdnzrn5xEo4Aw54DrhDXAtgKDOIbt4cxwcHvSik2a0muo1LGQI">
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-yellow text-black px-3 py-1 text-xs font-bold neo-border-thin rounded">ACADEMIC</span>
+<span class="bg-purple-100 text-purple-700 px-3 py-1 text-xs font-bold neo-border-thin rounded">INTERNATIONAL CONFERENCE</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Presenter IECES 2025</h3>
+<p class="text-gray-700 font-medium leading-relaxed mb-6 flex-grow">IECES Presenter continuing academic contributions in the field of digital business and technology integration.</p>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-green-200 px-3 py-1 rounded font-bold text-xs">Academic Contribution</span>
+<span class="skill-badge bg-yellow px-3 py-1 rounded font-bold text-xs">Data Analysis</span>
+</div>
+</div></div>
+</section>
+<!-- Contact Form Section  -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="contact">
+<div class="bg-yellow neo-border rounded-3xl p-8 lg:p-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="aos-init aos-animate" data-aos="fade-right">
+<h2 class="text-5xl font-bold mb-8">Let's build something great.</h2>
+<p class="text-xl font-bold mb-12">Saya terbuka untuk peluang kerja sebagai fresh graduate, proyek freelance, atau diskusi seputar bisnis digital.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white neo-border-thin flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span class="text-xl font-bold">ikhwanh085@gmail.com</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white neo-border-thin flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span class="text-xl font-bold">081222189756</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white neo-border-thin flex items-center justify-center">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span class="text-xl font-bold">Medan, Sumatera Utara</span>
+</div>
+</div>
+</div>
+<div class="bg-white neo-border p-8 rounded-2xl aos-init aos-animate" data-aos="fade-left">
+<form class="space-y-6" action="mailto:ikhwanh085@gmail.com" method="post" enctype="text/plain">
+<div>
+<label class="block text-lg font-bold mb-2">Your Name</label>
+<input class="w-full bg-cream border-4 border-black p-4 font-bold focus:outline-none focus:ring-0" placeholder="Username" type="text">
+</div>
+<div>
+<label class="block text-lg font-bold mb-2">Email Address</label>
+<input class="w-full bg-cream border-4 border-black p-4 font-bold focus:outline-none focus:ring-0" placeholder="user@gmail.com" type="email">
+</div>
+<div>
+<label class="block text-lg font-bold mb-2">Your Message</label>
+<textarea class="w-full bg-cream border-4 border-black p-4 font-bold focus:outline-none focus:ring-0" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="w-full btn-yellow py-4 text-xl font-bold uppercase tracking-wider" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer  -->
+<footer class="bg-black text-white pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="md:col-span-2">
+<div class="flex items-center space-x-2 mb-6">
+<div class="w-10 h-10 bg-yellow border-2 border-black rounded-full flex items-center justify-center text-black">
+<span class="font-bold">I</span>
+</div>
+<span class="text-3xl font-bold tracking-tight">PORTOFOLIO</span>
+</div>
+<p class="text-gray-400 font-medium max-w-sm">Berfokus pada analisis data dan manajemen bisnis digital yang akurat dan terstruktur.</p>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-6 text-yellow">Navigation</h4>
+<ul class="space-y-4 font-bold">
+<li class=""><a class="hover:text-yellow transition" href="#home">Home</a></li>
+<li class=""><a class="hover:text-yellow transition" href="#about">About Me</a></li>
+<li class=""><a class="hover:text-yellow transition" href="#skills">Skills</a></li>
+<li class=""><a class="hover:text-yellow transition" href="#project">Projects</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-6 text-yellow">Socials</h4>
+<ul class="space-y-4 font-bold">
+<li class=""><a class="hover:text-yellow transition" href="https://linkedin.com">LinkedIn</a></li>
+<li class=""><a class="hover:text-yellow transition" href="https://github.com">GitHub</a></li>
+<li class=""><a class="hover:text-yellow transition" href="https://instagram.com">Instagram</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center font-bold text-gray-500 text-sm">
+<p class="">© 2025 Ikhwan Hakim.</p>
+<div class="mt-4 md:mt-0 flex gap-8">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Intersection Observer for Active Nav Link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+
+
+
+</body></html>
